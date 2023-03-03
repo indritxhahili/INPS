@@ -14,13 +14,13 @@ import org.junit.runner.RunWith;
                 "rerun:target/rerun.txt",
                 "me.jvt.cucumber.report.PrettyReports:target/cucumber",},
         monochrome = true,
-        tags = "@LavoroINPS"
+        tags = "@CarateriSpeziali"
        // publish = false
        // @Ricerca
         // @LavoroINPS
         // @zerobank
        // @RicercaTestNegativo
-
+      //  @CarateriSpeziali
 
 )
 
