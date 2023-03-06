@@ -46,6 +46,7 @@ CarateriSpeziali_Page carateriSpeziali_page = new CarateriSpeziali_Page();
         if (!carateriSpeziali_page.RisultatoSLash.getText().contains(srt)){
             System.out.println("Resultato non e correto!!!!");
             System.out.println("Aspettiamo questo risultato---->" + srt +"<----- che deve essere inculso nella riga: " + "----> " + carateriSpeziali_page.RisultatoSLash.getText());
+            System.out.println("Error : ");
             Thread.sleep(3000);
             //Driver.getDriver().close();
         }else
@@ -80,6 +81,7 @@ CarateriSpeziali_Page carateriSpeziali_page = new CarateriSpeziali_Page();
         if (!carateriSpeziali_page.RisultatoSLash.getText().contains(srt)){
             System.out.println("Resultato non e correto!!!!");
             System.out.println("Aspettiamo questo risultato---->" + srt +"<----- che deve essere inculso nella riga: " + "----> " + carateriSpeziali_page.RisultatoSLash.getText());
+            System.out.println("Error : ");
             Thread.sleep(3000);
             //  Driver.getDriver().close();
         }else
@@ -105,7 +107,8 @@ CarateriSpeziali_Page carateriSpeziali_page = new CarateriSpeziali_Page();
         if (!carateriSpeziali_page.RisultatoSLash.getText().contains(srt)){
             System.out.println("Resultato non e correto!!!!");
             System.out.println("Aspettiamo questo risultato---->" + srt1 +"<----- che deve essere inculso nella riga: " + "----> " + carateriSpeziali_page.RisultatoSLash.getText());
-            // Thread.sleep(3000);
+            System.out.println("Error : ");
+             Thread.sleep(3000);
             // Driver.getDriver().close();
         }else
         System.out.println("Resultato e correto ");
@@ -130,6 +133,7 @@ CarateriSpeziali_Page carateriSpeziali_page = new CarateriSpeziali_Page();
         if (!carateriSpeziali_page.RisultatoSLash.getText().contains(srt2)){
             System.out.println("Resultato non e correto!!!!");
             System.out.println("Aspettiamo questo risultato---->" + srt2 +"<----- che deve essere inculso nella riga: " + "----> " + carateriSpeziali_page.RisultatoSLash.getText());
+            System.out.println("Error : ");
             Thread.sleep(3000);
             //  Driver.getDriver().close();
         }else
@@ -155,6 +159,7 @@ CarateriSpeziali_Page carateriSpeziali_page = new CarateriSpeziali_Page();
         if (!carateriSpeziali_page.RisultatoSLash.getText().contains(srt3)){
             System.out.println("Resultato non e correto!!!!");
             System.out.println("Aspettiamo questo risultato---->" + srt3 +"<----- che deve essere inculso nella riga: " + "----> " + carateriSpeziali_page.RisultatoSLash.getText());
+            System.out.println("Error : ");
             Thread.sleep(3000);
            // Driver.getDriver().close();
         }else
@@ -182,6 +187,7 @@ CarateriSpeziali_Page carateriSpeziali_page = new CarateriSpeziali_Page();
             System.out.println("Resultato non e correto!!!!");
             System.out.println("Aspettiamo questo risultato---->" + srt4 +"<----- che deve essere inculso nella riga: " + "----> " + carateriSpeziali_page.RisultatoSLash.getText());
             Thread.sleep(3000);
+            System.out.println("Error : ");
             Driver.getDriver().close();
         }else
             System.out.println("Resultato e correto ");
