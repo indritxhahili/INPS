@@ -64,11 +64,5 @@ public class INPS_StepDefinitions {
             System.out.println("ERRORE NELLA PAGINA , QUALCOSA E ANDATA MALE!!");
         }
 
-
-
-
-
-
-
     }
 }
