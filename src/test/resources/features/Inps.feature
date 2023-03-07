@@ -1,7 +1,7 @@
-@zerobank
+
 Feature: Dobbiamo fare un semplice sul la pagina di INPS
 
-
+    @zerobank @test
      Scenario: qui e lo primo step che dobbiamo seguire
      Given User deve aprire il browsers
      Then User deve andare sul la Pagina

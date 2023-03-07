@@ -1,4 +1,3 @@
-
 @Ricerca
 Feature: dobbiamo cercare un nome sulla Ricerca
 

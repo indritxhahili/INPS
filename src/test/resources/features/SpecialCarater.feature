@@ -1,4 +1,4 @@
- @CarateriSpeziali
+ @CarateriSpeziali @test
  Feature: Qui dobbiamo metere il caratere speziale
 
 Scenario: Questo e lo step che noi dobbiamo aprire la Ricerca e metere i carateri speziali

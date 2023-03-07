@@ -6,7 +6,6 @@ import io.cucumber.java.en.Then;
 import org.openqa.selenium.JavascriptExecutor;
 import utilities.ConfigurationReader;
 import utilities.Driver;
-
 import javax.management.loading.PrivateClassLoader;
 import java.util.Random;
 
@@ -141,7 +140,6 @@ CarateriSpeziali_Page carateriSpeziali_page = new CarateriSpeziali_Page();
         Thread.sleep(3000);
         //   Driver.getDriver().close();
 
-
         if(carateriSpeziali_page.ClickNellaRicerca.isEnabled()){
             carateriSpeziali_page.ClickNellaRicerca.click();
         }else
@@ -155,7 +153,6 @@ CarateriSpeziali_Page carateriSpeziali_page = new CarateriSpeziali_Page();
         //  Qui aspettiamo il risultato sensa // pero con 2 spazi
         String srt3 = "Pensione()Lavoro";
 
-
         if (!carateriSpeziali_page.RisultatoSLash.getText().contains(srt3)){
             System.out.println("Resultato non e correto!!!!");
             System.out.println("Aspettiamo questo risultato---->" + srt3 +"<----- che deve essere inculso nella riga: " + "----> " + carateriSpeziali_page.RisultatoSLash.getText());
@@ -166,8 +163,6 @@ CarateriSpeziali_Page carateriSpeziali_page = new CarateriSpeziali_Page();
             System.out.println("Resultato e correto ");
         Thread.sleep(3000);
        // Driver.getDriver().close();
-
-
 
         if(carateriSpeziali_page.ClickNellaRicerca.isEnabled()){
             carateriSpeziali_page.ClickNellaRicerca.click();
