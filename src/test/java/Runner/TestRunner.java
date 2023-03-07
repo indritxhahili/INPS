@@ -20,6 +20,8 @@ import org.junit.runner.RunWith;
        // @RicercaTestNegativo
       //  @CarateriSpeziali
 
+
+       // test -Dcucumber.filter.tags="@smoke"
 )
 public class TestRunner {
 
