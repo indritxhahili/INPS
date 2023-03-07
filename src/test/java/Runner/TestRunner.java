@@ -11,8 +11,8 @@ import org.junit.runner.RunWith;
         plugin = { "html:target/cucumber-report.html",
                 "rerun:target/rerun.txt",
                 "me.jvt.cucumber.report.PrettyReports:target/cucumber",},
-        monochrome = true,
-        tags = "@zerobank"
+       // monochrome = true,
+        tags = "@test @zerobank"
        // publish = false
        // @Ricerca
         // @LavoroINPS

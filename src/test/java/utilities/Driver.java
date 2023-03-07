@@ -76,7 +76,7 @@ public class Driver {
                     String gridAdress = "44.193.207.119"; // put your own Linux grid IP here  In case i dont have mine this is from Cydeo 54.89.242.106
                     try {
                         URL url = new URL("http://"+gridAdress+":4444/wd/hub");
-                        DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
+                        DesiredCapabilities desiredCapabilities = new DesiredCapabilities(); //44.193.207.119
                         desiredCapabilities.setBrowserName("chrome");
                         driverPool.set(new RemoteWebDriver(url,desiredCapabilities));
                         driverPool.get().manage().window().maximize();
