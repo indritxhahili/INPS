@@ -22,7 +22,7 @@ public class Lavoro_StepDefinitions {
 
     @Given("User deve aprire Home Page")
     public void user_deve_aprire_home_page() throws InterruptedException {
-        Driver.getDriver().get(ConfigurationReader.getProperty("INPSurl"));
+        Driver.getDriver().get(ConfigurationReader.getProperty("INPSURL.IN.LAVORAZIONE"));
 
         lavoro_page.AccetaTutto.click();
         Thread.sleep(3000);
@@ -101,29 +101,36 @@ public class Lavoro_StepDefinitions {
     public void user_deve_clicare_carica_altri_dieci_servizi() throws InterruptedException {
         JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
         js.executeScript("window.scrollBy(0,1800)", "");
-        Thread.sleep(4000);
+        Thread.sleep(3000);
         lavoro_page.CaricaAltri10Servizi.click();
 
-        Thread.sleep(4000);
+        Thread.sleep(3000);
         js.executeScript("window.scrollBy(0,1800)", "");
         Thread.sleep(3000);
 
         lavoro_page.CaricaAltri10Servizi.click();
 
-        Thread.sleep(4000);
-        js.executeScript("window.scrollBy(0,2000)", "");
+        Thread.sleep(3000);
+        js.executeScript("window.scrollBy(0,1800)", "");
 
         Thread.sleep(3000);
         lavoro_page.CaricaAltri10Servizi.click();
 
-        Thread.sleep(4000);
-        js.executeScript("window.scrollBy(0,2000)", "");
+        Thread.sleep(3000);
+        js.executeScript("window.scrollBy(0,800)", "");
+
+        Thread.sleep(3000);
+        lavoro_page.CaricaAltri10Servizi.click();
+
+
+        Thread.sleep(3000);
+        js.executeScript("window.scrollBy(0,800)", "");
 
         Thread.sleep(3000);
         lavoro_page.CaricaAltri10Servizi.click();
 
         Thread.sleep(2000);
-        js.executeScript("window.scrollBy(0,500)", "");
+        js.executeScript("window.scrollBy(0,600)", "");
 
         String ActuallUltimoServizio = lavoro_page.UltimoServizioNellaRicercaDiLavoro.getText();
         String ExpectedUltimoServizio = "Approfondisci\n" +

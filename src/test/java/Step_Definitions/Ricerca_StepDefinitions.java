@@ -5,6 +5,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
+import utilities.ConfigurationReader;
 import utilities.Driver;
 
 import java.util.concurrent.TimeUnit;
@@ -15,7 +16,7 @@ public class Ricerca_StepDefinitions {
 
     @When("user deve aprire home page")
     public void user_deve_aprire_home_page() throws InterruptedException {
-        Driver.getDriver().get("https://www.inps.it/it/it.html");
+        Driver.getDriver().get(ConfigurationReader.getProperty("INPSURL.IN.LAVORAZIONE"));
 
         ricerca_pageFactory.AccetaTutto.click();
         Thread.sleep(3000);

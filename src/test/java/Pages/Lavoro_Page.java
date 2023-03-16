@@ -16,7 +16,7 @@ public class Lavoro_Page {
     @FindBy(xpath = "//*[@id=\"acceptAllBtn\"]")
     public WebElement AccetaTutto;
 
-    @FindBy(xpath = "//a[@aria-label='Lavoro']")
+    @FindBy(xpath = "//a[@aria-label='Apri menu Lavoro']")
     public WebElement ClickLavoro;
 
     @FindBy(xpath = "//div[@class='col-lg-7 p-5 bg-lavoro-nav']//a[@class='megamenu-item font-weight-bold text-primary'][contains(text(),'Esplora')]")

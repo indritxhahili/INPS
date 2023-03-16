@@ -24,7 +24,7 @@ public class Ricerca_PageFactory {
     public WebElement ClickNellaRicerca;
 
 
-   @FindBy(xpath = "/html/body/div[1]/div/div/div/div[1]/div/div/div/div/header/div[3]/div/div/div[2]/div[2]/div/div/div[2]/div/div[1]/p")
+   @FindBy(xpath = "//*[@id=\"modalInputError\"]/div/div/div[2]/div/div[1]/p")
     public WebElement GetOutputNellaRicerca;
 
 

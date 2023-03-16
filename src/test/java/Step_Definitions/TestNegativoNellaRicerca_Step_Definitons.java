@@ -3,6 +3,7 @@ package Step_Definitions;
 import Pages.TestNegativoNellaRicerca_Page;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import utilities.ConfigurationReader;
 import utilities.Driver;
 
 import java.util.concurrent.TimeUnit;
@@ -12,7 +13,7 @@ public class TestNegativoNellaRicerca_Step_Definitons {
 TestNegativoNellaRicerca_Page testNegativoNellaRicerca_page = new TestNegativoNellaRicerca_Page();
     @Given("User deve aprire la pagina Home Page")
     public void user_deve_aprire_la_pagina_home_page() throws InterruptedException {
-        Driver.getDriver().get("https://www.inps.it/it/it.html");
+        Driver.getDriver().get(ConfigurationReader.getProperty("INPSURL.IN.LAVORAZIONE"));
 
         Thread.sleep(2000);
         testNegativoNellaRicerca_page.AccetaTutto.click();

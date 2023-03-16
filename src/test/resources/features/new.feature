@@ -1,1 +1,0 @@
-Feature: Qui dobbiamo automatizzare INPS , pero dobbaimo

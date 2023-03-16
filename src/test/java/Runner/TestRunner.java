@@ -10,18 +10,22 @@ import org.junit.runner.RunWith;
         glue= {"Step_Definitions"},
         plugin = { "html:target/cucumber-report.html",
                 "rerun:target/rerun.txt",
+                "pretty", "json:target/cucumber-reports/Cucumber.json",
                 "me.jvt.cucumber.report.PrettyReports:target/cucumber",},
        // monochrome = true,
-        tags = "@test @zerobank"
-       // publish = false
-       // @Ricerca
+        tags = "@TestAnpal "
+        // @Regression
+        // publish = false
+        //  @TestAnpal
+        // @Ricerca
         // @LavoroINPS
         // @zerobank
-       // @RicercaTestNegativo
-      //  @CarateriSpeziali
-
-
-       // test -Dcucumber.filter.tags="@smoke"
+        // @RicercaTestNegativo
+        //  @CarateriSpeziali
+        //  @RicercaCon3Valori
+        //   @Notizie
+        //@Lettere_Verifica
+        // test -Dcucumber.filter.tags="@smoke"
 )
 public class TestRunner {
 

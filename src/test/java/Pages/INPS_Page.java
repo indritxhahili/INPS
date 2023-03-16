@@ -11,9 +11,8 @@ public INPS_Page(){
             PageFactory.initElements(Driver.getDriver(),this);
         }
 
-@FindBy(xpath = "//a[@aria-label='Pensione e Previdenza']")
+@FindBy(xpath = "//a[@aria-label='Apri menu Pensione e Previdenza']")
     public WebElement UserShouldClickOnPensioneEPrevidenza;
-
 
 @FindBy(xpath = "//*[@id=\"acceptAllBtn\"]")
 public WebElement AccetaTutto;
@@ -24,7 +23,7 @@ public WebElement EsploraPensioneEPrevidenza;
 @FindBy(xpath = "//a[@title='Vedi tutti']")
     public WebElement VediTutto;
 
-@FindBy(xpath = "/html/body/div[1]/div/div/div/main/div/div/div[2]/div/div[2]/div[2]/div[2]/div[1]/div[3]/a")
+@FindBy(xpath = "//*[@id=\"result-container\"]/div[2]/div[1]/div[3]/a")
     public WebElement Approfondisci;
 
 @FindBy(xpath = "//a[@id='utilizzaSticky_dettScheda']")

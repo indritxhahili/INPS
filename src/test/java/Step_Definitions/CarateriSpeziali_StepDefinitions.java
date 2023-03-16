@@ -1,5 +1,4 @@
 package Step_Definitions;
-
 import Pages.CarateriSpeziali_Page;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -15,7 +14,7 @@ CarateriSpeziali_Page carateriSpeziali_page = new CarateriSpeziali_Page();
 
     @Given("User deve aprire il browsers e seguire i step")
     public void user_deve_aprire_il_browsers_e_seguire_i_step() throws InterruptedException {
-        Driver.getDriver().get(ConfigurationReader.getProperty("INPSurl"));
+        Driver.getDriver().get(ConfigurationReader.getProperty("INPSURL.IN.LAVORAZIONE"));
 
         carateriSpeziali_page.AccetaTutto.click();
         Thread.sleep(2000);
@@ -24,10 +23,9 @@ CarateriSpeziali_Page carateriSpeziali_page = new CarateriSpeziali_Page();
            carateriSpeziali_page.ClickNellaRicerca.click();
        }else
            System.out.println("La Ricerca non e valida!!");
-
+        Thread.sleep(4000);
+      //  carateriSpeziali_page.CancellazioneINPS.click();
         Thread.sleep(2000);
-
-
     }
     @Then("User deve andare sul la Pagina e seguire")
     public void user_deve_andare_sul_la_pagina_e_seguire() throws InterruptedException {
@@ -37,6 +35,8 @@ CarateriSpeziali_Page carateriSpeziali_page = new CarateriSpeziali_Page();
         Thread.sleep(2000);
         JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
         js.executeScript("window.scrollBy(0,-500)","");
+        Thread.sleep(4000);
+        carateriSpeziali_page.Cancella_La_Ricerca.click();
 
         //  Qui aspettiamo il risultato sensa // pero con 2 spazi
         String srt = "  Reddito";
@@ -72,7 +72,11 @@ CarateriSpeziali_Page carateriSpeziali_page = new CarateriSpeziali_Page();
         carateriSpeziali_page.ClickNellaRicerca.sendKeys("Pensione<!>Lavoro");
         Thread.sleep(2000);
         carateriSpeziali_page.BTNClick.click();
-
+        Thread.sleep(2000);
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        js.executeScript("window.scrollBy(0,-500)","");
+        Thread.sleep(4000);
+      carateriSpeziali_page.Cancella_La_Ricerca.click();
         //  Qui aspettiamo il risultato sensa // pero con 2 spazi
         String srt = "Pensione   Lavoro";
 
@@ -98,7 +102,9 @@ CarateriSpeziali_Page carateriSpeziali_page = new CarateriSpeziali_Page();
         carateriSpeziali_page.ClickNellaRicerca.sendKeys("Pensione{}Lavoro");
         Thread.sleep(2000);
         carateriSpeziali_page.BTNClick.click();
-
+        js.executeScript("window.scrollBy(0,-500)","");
+        Thread.sleep(4000);
+        carateriSpeziali_page.Cancella_La_Ricerca.click();
         //  Qui aspettiamo il risultato sensa // pero con 2 spazi
         String srt1 = "Pensione  Lavoro";
 
@@ -124,7 +130,9 @@ CarateriSpeziali_Page carateriSpeziali_page = new CarateriSpeziali_Page();
         carateriSpeziali_page.ClickNellaRicerca.sendKeys("Pensione!!!!====Lavoro");
         Thread.sleep(2000);
         carateriSpeziali_page.BTNClick.click();
-
+        js.executeScript("window.scrollBy(0,-500)","");
+        Thread.sleep(4000);
+        carateriSpeziali_page.Cancella_La_Ricerca.click();
         //  Qui aspettiamo il risultato sensa // pero con 2 spazi
         String srt2 = "Pensione        Lavoro";
 
@@ -149,7 +157,9 @@ CarateriSpeziali_Page carateriSpeziali_page = new CarateriSpeziali_Page();
         carateriSpeziali_page.ClickNellaRicerca.sendKeys("Pensione()Lavoro");
         Thread.sleep(2000);
         carateriSpeziali_page.BTNClick.click();
-
+        js.executeScript("window.scrollBy(0,-500)","");
+        Thread.sleep(4000);
+       carateriSpeziali_page.Cancella_La_Ricerca.click();
         //  Qui aspettiamo il risultato sensa // pero con 2 spazi
         String srt3 = "Pensione()Lavoro";
 
@@ -173,7 +183,9 @@ CarateriSpeziali_Page carateriSpeziali_page = new CarateriSpeziali_Page();
         carateriSpeziali_page.ClickNellaRicerca.sendKeys("//Pensione Lavoro//");
         Thread.sleep(2000);
         carateriSpeziali_page.BTNClick.click();
-
+        js.executeScript("window.scrollBy(0,-500)","");
+        Thread.sleep(4000);
+       carateriSpeziali_page.Cancella_La_Ricerca.click();
         //  Qui aspettiamo il risultato sensa // pero con 2 spazi
         String srt4 = "//Pensione Lavoro//";
 

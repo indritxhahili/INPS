@@ -25,4 +25,8 @@ public class CarateriSpeziali_Page {
     @FindBy(xpath = "//*[@id=\"main\"]")
     public WebElement RisultatoSLash;
 
+    @FindBy(xpath = "//a[@id='resetsearch']//i[@class='fas fa-times']")
+    public WebElement Cancella_La_Ricerca;
+
+
 }

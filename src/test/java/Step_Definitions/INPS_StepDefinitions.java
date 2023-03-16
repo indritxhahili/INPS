@@ -6,6 +6,7 @@ import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.PageFactory;
+import utilities.ConfigurationReader;
 import utilities.Driver;
 
 public class INPS_StepDefinitions {
@@ -13,14 +14,11 @@ public class INPS_StepDefinitions {
 
     @Given("User deve aprire il browsers")
     public void user_deve_aprire_il_browsers() throws InterruptedException {
-        Driver.getDriver().get("https://www.inps.it/it/it.html");
-
+        Driver.getDriver().get(ConfigurationReader.getProperty("INPSURL.IN.LAVORAZIONE"));
         pageFactory.AccetaTutto.click();
         Thread.sleep(3000);
 
        pageFactory.UserShouldClickOnPensioneEPrevidenza.click();
-
-
         Thread.sleep(3000);
 
        pageFactory.EsploraPensioneEPrevidenza.click();
