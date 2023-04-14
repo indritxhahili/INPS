@@ -11,14 +11,11 @@ import utilities.Driver;
 public class Regression_Step_Definitions {
     String strFAILED = "FAILED";
     String strPASSED = "PASSED";
-
     Regression_Page regression_page = new Regression_Page();
-
     @Given("User deve aprire home page")
     public void user_deve_aprire_home_page() {
         Driver.getDriver().get(ConfigurationReader.getProperty("INPSURL.IN.LAVORAZIONE"));
         regression_page.AccetaTutto.click();
-
     }
     @Then("User deve clicare nella ricerca")
     public void user_deve_clicare_nella_ricerca() throws InterruptedException {
@@ -31,13 +28,11 @@ public class Regression_Step_Definitions {
     @Then("User deve testare il metodo di slash e spazio")
     public void user_deve_testare_il_metodo_di_slash_e_spazio() {
         String str = "  Pensione";
-
         if (!regression_page.Risposta_Della_Ricerca.getText().matches(str)) {
             System.out.println("Error : Something went wrong , La RICERCA NON FUNZIONA CON CARATERI SPEZIALI!!");
             // Driver.getDriver().close();
         } else
             System.out.println("E Andata tutto bene , Next Step");
-
     }
     @When("User deve navigare Pensione e Previdenza")
     public void user_deve_navigare_pensione_e_previdenza() throws InterruptedException {
@@ -53,7 +48,6 @@ public class Regression_Step_Definitions {
 
         regression_page.Click_Esplora_Pensione_Previdenza.click();
         Thread.sleep(4000);
-
     }
     @Then("User deve clicare nella verificare Esplora Pensione e Previdenza Vedi tutti")
     public void user_deve_clicare_nella_verificare_esplora_pensione_e_previdenza_vedi_tutti() throws InterruptedException {
@@ -63,7 +57,6 @@ public class Regression_Step_Definitions {
         Thread.sleep(3000);
         regression_page.Click_Vedi_Tutti.click();
         Thread.sleep(2000);
-
     }
     @Then("User deve clicare e verificare Approfondisci")
     public void user_deve_clicare_e_verificare_approfondisci() throws InterruptedException {
@@ -99,7 +92,6 @@ public class Regression_Step_Definitions {
             System.out.println("Esplora Lavoro Is Enable");
         regression_page.Click_Esplora_Lavoro.click();
         Thread.sleep(4000);
-
     }
     @Given("User deve Clicare di nuova la Pagina Pensione e Previdenza")
     public void user_deve_clicare_di_nuova_la_pagina_pensione_e_previdenza() throws InterruptedException {
@@ -107,7 +99,6 @@ public class Regression_Step_Definitions {
         js.executeScript("window.scrollBy(0,1500)", "");
         Thread.sleep(4000);
         regression_page.Click_Vedi_Tutti_Lavoro.click();
-
     }
     @Then("User si deve navigare nella Pagina Lavoro")
     public void user_si_deve_navigare_nella_pagina_lavoro() throws InterruptedException {
@@ -135,7 +126,6 @@ public class Regression_Step_Definitions {
 
         Thread.sleep(3000);
         regression_page.Click_Sostegni_Sussidi.click();
-
     }
     @Then("User deve clicare nella Pagina Approfondisci")
     public void user_deve_clicare_nella_pagina_approfondisci() throws InterruptedException {
@@ -150,7 +140,7 @@ public class Regression_Step_Definitions {
         // String strFAILED = "TEST FAILED";
         //String strPASSED = "TEST PASSED";
         if (!regression_page.Vedi_Tutti_Click_Sostegni_Sussidi.isEnabled()) {
-            System.out.println("Error: Click Tutti is not Enable " + strFAILED);
+            System.err.println("Error: Click Tutti is not Enable " + strFAILED);
         } else
             regression_page.Vedi_Tutti_Click_Sostegni_Sussidi.click();
         System.out.println("Click Tutti Is Enable " + strPASSED);
@@ -231,7 +221,6 @@ public class Regression_Step_Definitions {
         js.executeScript("window.scrollBy(0,3500)", "");
         Thread.sleep(2000);
     }
-
     // io.cucumber.junit.UndefinedStepException: The step 'User deve clicare nella Pagina di Software e clicare   Per i CAF ed i liberi professionisti' and 1 other step(s) are undefined.
     //  You can implement these steps using the snippet(s) below:
     @Given("User deve clicare nella Pagina di Software e clicare   Per i CAF ed i liberi professionisti")
@@ -253,7 +242,6 @@ public class Regression_Step_Definitions {
         regression_page.ApplicaFiltri.click();
         Thread.sleep(2000);
     }
-
     @Given("User deve clicare complilare e fare un Inserimento puoi Applica e Cancella")
     public void user_deve_clicare_complilare_e_fare_un_inserimento_puoi_applica_e_cancella() {
         //  String strFAILED = "TEST FAILED";
@@ -272,7 +260,6 @@ public class Regression_Step_Definitions {
     }
     //  io.cucumber.junit.UndefinedStepException: The step 'User deve clicare nella Pagina Per i medici certificatori e Medici di Famiglia' and 1 other step(s) are undefined.
     //  You can implement these steps using the snippet(s) below:
-
     @Given("User deve clicare nella Pagina Per i medici certificatori e Medici di Famiglia")
     public void user_deve_clicare_nella_pagina_per_i_medici_certificatori_e_medici_di_famiglia() throws InterruptedException {
         JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
@@ -301,7 +288,6 @@ public class Regression_Step_Definitions {
         regression_page.CancellaFiltri_Medici.click();
         Thread.sleep(2000);
     }
-
     @Given("User deve Aprire la Pagina e fare un Inserimento puoi fare una Cancellazione")
     public void user_deve_aprire_la_pagina_e_fare_un_inserimento_puoi_fare_una_cancellazione() {
         //  String strFAILED = "TEST FAILED";
@@ -321,7 +307,6 @@ public class Regression_Step_Definitions {
     }
     // io.cucumber.junit.UndefinedStepException: The step 'User deve clicare Per il cittadino' and 1 other step(s) are undefined.
     // You can implement these steps using the snippet(s) below:
-
     @Given("User deve clicare Per il cittadino")
     public void user_deve_clicare_per_il_cittadino() throws InterruptedException {
         JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();

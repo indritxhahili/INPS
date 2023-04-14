@@ -43,7 +43,7 @@ public class Ricerca_StepDefinitions {
         Driver.getDriver().manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
 
         if (ricerca_pageFactory.ClickNellaRicerca.equals(Output)){
-            System.out.println("La Ricerca puoi cercare anche 2 charatteri ");
+            System.out.println("La Ricerca,  puoi cercare anche 2 charatteri ");
 
 
         }else System.out.println(ricerca_pageFactory.GetOutputNellaRicerca.getText());
@@ -58,8 +58,7 @@ public class Ricerca_StepDefinitions {
            System.out.println("Test Passed (:");
            Driver.getDriver().close();
        }else
-           System.out.println("Something went wrong, qualcosa e andata male!!");
-
+           System.err.println("Something went wrong, qualcosa e andata male!!");
 
     }
 

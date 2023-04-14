@@ -13,7 +13,7 @@ import org.junit.runner.RunWith;
                 "pretty", "json:target/cucumber-reports/Cucumber.json",
                 "me.jvt.cucumber.report.PrettyReports:target/cucumber",},
        // monochrome = true,
-        tags = "@TestAnpal "
+        tags = "@LavoroINPS"
         // @Regression
         // publish = false
         //  @TestAnpal
@@ -24,7 +24,7 @@ import org.junit.runner.RunWith;
         //  @CarateriSpeziali
         //  @RicercaCon3Valori
         //   @Notizie
-        //@Lettere_Verifica
+        //  @Lettere_Verifica
         // test -Dcucumber.filter.tags="@smoke"
 )
 public class TestRunner {

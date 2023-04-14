@@ -41,6 +41,8 @@ public class INPS_StepDefinitions {
         js.executeScript("window.scrollBy(0,600)","");
         Thread.sleep(3000);
 
+
+
     }
     @Then("User deve capire e seguire tutti li step che ci servono")
     public void user_deve_capire_e_seguire_tutti_li_step_che_ci_servono() {
